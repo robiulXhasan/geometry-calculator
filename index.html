@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="w-11/12 mx-auto">
+    <!-- header -->
+    <header>
+        <div class="flex justify-between items-center px-8 py-4  bg-sky-100 mt-5 rounded-lg">
+            <div>
+                <h2 class="text-2xl font-semibold">Interactive</h2>
+                <p>Geometry Genius</p>
+            </div>
+            <div>
+                <button id="blog-btn" class="px-4 py-2 bg-sky-500 text-white font-medium rounded">Blog</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class=" sm:flex-none md:flex  gap-5 mt-10">
+            <div class="sm:w-100 md:w-4/6 ">
+                <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4 justify-center card-container">
+                    <!-- triangle -->
+                    <div id="triangle-card" class="card p-2  text-center border rounded">
+
+                        <img class="h-1/2 inline   items-center" src="./images/triangle.png" alt="">
+
+                        <h3 class="text-2xl font-medium mt-4 mb-2">Triangle</h3>
+                        <p>Area (A) = 0.5 x b x h</p>
+                        <input id="triangle-base" class="w-1/3 bg-[#F1F1F1] px-3 mt-2" type="text" placeholder="b">
+                        <label class="mx-2" for="">cm</label>
+                        <input id="triangle-height" class="w-1/3 bg-[#F1F1F1] px-3" type="text" placeholder="h">
+                        <label for="">cm</label>
+                        <button id="triangle-calculate"
+                            class="my-5 px-5 py-2 bg-sky-500 text-white font-medium rounded w-full">Calculate</button>
+                    </div>
+                    <!-- Rectangle -->
+                    <div id="rectangle-card" class="card p-2 text-center border rounded">
+                        <img class="h-1/2 inline" src="./images/rectangle.png" alt="">
+                        <h3 class="text-2xl font-medium mt-4 mb-2">Rectangle</h3>
+                        <p>Area (A) = w x I</p>
+                        <input id="rectangle-width" class="w-1/3 bg-[#F1F1F1] px-3 mt-2" type="text" placeholder="w">
+                        <label class="mx-2" for="">cm</label>
+                        <input id="rectangle-length" class="w-1/3 bg-[#F1F1F1] px-3" type="text" placeholder="l">
+                        <label for="">cm</label>
+                        <button id="rectangle-calculate"
+                            class="mt-5 px-5 py-2 bg-sky-500 text-white font-medium rounded w-full">Calculate</button>
+                    </div>
+                    <!--  Parallelogram-->
+                    <div id="parallelogram-card" class="card p-2 text-center border rounded">
+                        <img class="h-1/2 inline" src="./images/parallelogram.png" alt="">
+                        <h3 class="text-2xl font-medium mt-4 mb-2">Parallelogram</h3>
+                        <p>Area (A) = b x h</p>
+                        <input id="parallelogram-base" class="w-1/3 bg-[#F1F1F1] px-3 mt-2" type="text" placeholder="b">
+                        <label class="mx-2" for="">cm</label>
+                        <input id="parallelogram-height" class="w-1/3 bg-[#F1F1F1] px-3" type="text" placeholder="h">
+                        <label for="">cm</label>
+                        <button id="parallelogram-calculate"
+                            class="mt-5 px-5 py-2 bg-sky-500 text-white font-medium rounded w-full">Calculate</button>
+                    </div>
+                    <!-- Rhombus -->
+                    <div id="rhombus-card" class="card p-2 text-center border rounded">
+                        <img class="h-1/2 inline" src="./images/rhombus.png" alt="">
+                        <h3 class="text-2xl font-medium mt-4 mb-2">Rhombus</h3>
+                        <p>Area (A) = 0.5 x d1 x d2</p>
+                        <input id="rhombus-diagonal1" class="w-1/3 bg-[#F1F1F1] px-3 mt-2" type="text" placeholder="d1">
+                        <label class="mx-2" for="">cm</label>
+                        <input id="rhombus-diagonal2" class="w-1/3 bg-[#F1F1F1] px-3" type="text" placeholder="d2">
+                        <label for="">cm</label>
+                        <button id="rhombus-calculate"
+                            class="mt-5 px-5 py-2 bg-sky-500 text-white font-medium rounded w-full">Calculate</button>
+                    </div>
+                    <!-- Pentagon -->
+                    <div id="pentagon-card" class="card p-2 text-center border rounded">
+                        <img class="h-1/2 inline" src="./images/pentagon.png" alt="">
+                        <h3 class="text-2xl font-medium mt-4 mb-2">Pentagon</h3>
+                        <p>Area (A) = 0.5 x p x b</p>
+                        <input id="pentagon-perimeter" class="w-1/3 bg-[#F1F1F1] px-3 mt-2" type="text" placeholder="p">
+                        <label class="mx-2" for="">cm</label>
+                        <input id="pentagon-apothem" class="w-1/3 bg-[#F1F1F1] px-3" type="text" placeholder="b">
+                        <label for="">cm</label>
+                        <button id="pentagon-calculate"
+                            class="mt-5 px-5 py-2 bg-sky-500 text-white font-medium rounded w-full">Calculate</button>
+                    </div>
+                    <!-- Ellipse -->
+                    <div id="ellipse-card" class="card p-2 text-center border rounded">
+                        <img class="h-1/2 inline" src="./images/ellipse.png" alt="">
+                        <h3 class="text-2xl font-medium mt-4 mb-2">Ellipse</h3>
+                        <p>Area (A) = πab</p>
+                        <input id="ellipse-major-length" class="w-1/3 bg-[#F1F1F1] px-3 mt-2" type="text"
+                            placeholder="a">
+                        <label class="mx-2" for="">cm</label>
+                        <input id="ellipse-minor-length" class="w-1/3 bg-[#F1F1F1] px-3" type="text" placeholder="b">
+                        <label for="">cm</label>
+                        <button id="ellipse-calculate"
+                            class="mt-5 px-5 py-2 bg-sky-500 text-white font-medium rounded w-full">Calculate</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- area collection -->
+            <div class="calculation flex-1">
+                <div class=" border rounded min-h-[300px]">
+                    <h3 class="text-2xl text-center font-medium underline underline-offset-2 mt-4 mb-2">Area Calculation
+                    </h3>
+                    <ol id="area-list" class="list-decimal pl-5 pr-1 space-y-3 mb-3">
+
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <script src="./Js/utilities.js"></script>
+    <script src="./Js/index.js"></script>
+</body>
+
+</html>
